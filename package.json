@@ -1,0 +1,34 @@
+{
+  "name": "burger-logger",
+  "version": "1.0.0",
+  "description": "Burger Wish List! Writeup a list of burgers you wish to eat and cross out the burgers you ate!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markrodriguez003/Burger-Logger.git"
+  },
+  "keywords": [
+    "Burger",
+    "Sandwich",
+    "Food-Wish-List",
+    "Burger-List",
+    "Sandwich-List"
+  ],
+  "author": "Mark Anthony Patrick Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Markrodriguez003/Burger-Logger/issues"
+  },
+  "homepage": "https://github.com/Markrodriguez003/Burger-Logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
