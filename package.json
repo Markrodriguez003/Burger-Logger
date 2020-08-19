@@ -2,11 +2,11 @@
   "name": "burger-logger",
   "version": "1.0.0",
   "description": "Burger Wish List! Writeup a list of burgers you wish to eat and cross out the burgers you ate!",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "repository": {
     "type": "git",

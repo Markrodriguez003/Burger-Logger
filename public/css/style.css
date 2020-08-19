@@ -1,0 +1,17 @@
+.main-container{
+    background-color: rgb(239, 179, 46);
+
+}
+
+.site-header {
+    color: red;
+}
+
+/* #burger-icon {
+
+} */
+
+.main-box {
+    background-color: rgba(59, 59, 59, 0.89);
+    color: white;
+}

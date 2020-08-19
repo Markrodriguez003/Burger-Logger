@@ -22,7 +22,7 @@ app.engine("handlebars", handlebars({
 }));
 
 // Sets up the static folder that contains all of our static assets (the things that don't change -> images, sound files, our pages, ect)
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 
 app.get("/", (req, res) => {
