@@ -17,6 +17,7 @@ app.set("view engine", "handlebars");
 
 // Initialized handlebars as our template engine and associating it to .exphbs files  
 app.engine("handlebars", handlebars({
+    defaultLayout: 'main',
     extname: "handlebars",
     layoutsDir: path.join(__dirname + '/views/layouts')
 }));
