@@ -11,7 +11,6 @@ const PORT = 7878 || process.env.PORT; // Setting up port
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
 // Sets up our template to express-handlebars
 app.set("view engine", "handlebars");
 
@@ -29,7 +28,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res) => {
     res.render("index");
 });
-
 
 // Setup server listener to port AFTER db tables is fully loaded
 app.listen(PORT, function () {
