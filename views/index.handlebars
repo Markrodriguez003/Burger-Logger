@@ -3,22 +3,18 @@
     <div class="wishlist-list-col col-sm">
         <h3 class="list-col-header">Foodie Item Wishlist</h3>
         <hr>
-        <ul class="list-group">
+        <ul class="list-group foodie-lister">
+
+            {{!-- NEW USER SUBMITTED FOOD ITEMS GENERATE HERE --}}
+
+
+            {{!-- EXAMPLE OF LIST ITEM --}}
             {{!-- <li class="list-group-item float-left">Cras justo odio <button type="submit"
                     class="btn btn-large btn-warning text-white row-sm ml-4 float-right devour-btn">Devour me!</button>
-            </li>
-            <li class="list-group-item float-left">Cras aafasfas justo odio <button type="submit"
-                    class="btn btn-large btn-warning text-white row-sm ml-4 float-right devour-btn">Devour me!</button>
-            </li>
-            <li class="list-group-item float-left">Cras justoasfasfa s odio <button type="submit"
-                    class="btn btn-large btn-warning text-white row-sm ml-4 float-right devour-btn">Devour me!</button>
-            </li>
-            <li class="list-group-item float-left">Cras justo odio asfasfasf<buftton type="submit"
-                    class="btn btn-large btn-warning text-white row-sm ml-4 float-right devour-btn">Devour me!</button>
-            </li>
-            <li class="list-group-item float-left">Craasfasfs justo odio <button type="submit"
-                    class="btn btn-large btn-warning text-white row-sm ml-4 float-right devour-btn">Devour me!</button>
             </li> --}}
+
+
+
         </ul>
     </div>
 
@@ -26,36 +22,78 @@
         <h3 class="list-col-header">Devoured Foodie Items</h3>
         <hr>
         <ul class="list-group devoured-list-col">
-            {{!-- <li class="list-group-item float-right ">Cras justo odio <button type="submit"
-                    class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
-            </li>
-            <li class="list-group-item float-right ">Cras aafasfas justo odio  <button type="submit"
-                    class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
-            </li>
-            <li class="list-group-item float-right ">Cras justoasfasfa s odio <button type="submit"
-                    class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
-            </li>
-            <li class="list-group-item float-right ">Cras justo odio asfasfasf<button type="submit"
-                    class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
-            </li>
-            <li class="list-group-item float-right ">Craasfasfs justo odio  <button type="submit"
-                    class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
+
+
+            {{!-- DEVOURED FOODIE ITEMS ARE GENERATED HERE --}}
+
+
+            {{!-- EXAMPLE DEVOURED FOODIE ITEM --}}
+            {{!--  <li class="list-group-item float-right ">Craasfasfs justo odio  <button type="submit"
+             class="btn btn-large btn-secondary text-white row-sm ml-4 float-left devour-btn">Undo!</button>
             </li> --}}
-            
+
         </ul>
     </div>
 </div>
 
-<div class="container">
-    <form action="" class="row-lg">
-        <div class="form-group col-sm text-center mt-4">
+{{!-- FOODIE ITEM SUBMISSION FORM --}}
+<div class="container row-sm text-center">
+    <form action="">
+        <div class="form-group col-sm text-center mt-4 row-btn">
             <label for="foodie-item-text-area" class="list-col-header">Enter your foodie item to your foodie
                 wishlist!</label>
             <textarea class="form-control foodie-text-area" id="foodie-item-text-area" rows="3"></textarea>
         </div>
 
-        <div class="submitBtn text-center">
-            <button type="submit" class="btn btn-large btn-light ">Add to wishlist!</button>
+        {{!-- SUBMIT BUTTON --}}
+        <div class="submitBtn text-center col-sm d-inline mx-auto text-center">
+            <button type="submit" class="btn btn-large btn-light row-sm">Add to wishlist!</button>
+        </div>
+
+        {{!-- FOOD ICON DROPDOWN --}}
+        <div class="btn-group d-inline col-sm">
+            <button type="button" class="btn btn-large btn-light  dropdown-toggle" data-toggle="dropdown"> Food Type
+                Icon
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu foodie-icon-dropdown" role="menu">
+                <div class="dropdown-divider">Burgers and More</div>
+                <a class="dropdown-item" href="#" data-food="127828"> &#127828 Hamburger</a>
+                <a class="dropdown-item" href="#" data-food="127789"> &#127789 Hotdog</a>
+                <a class="dropdown-item" href="#" data-food="127790"> &#127790 Taco</a>
+                <a class="dropdown-item" href="#" data-food="129386"> &#129386 Sandwich</a>
+                <a class="dropdown-item" href="#" data-food="129369"> &#129369 Pita Sandwich</a>
+                <a class="dropdown-item" href="#" data-food="127791"> &#127791 Burrito</a>
+                <a class="dropdown-item" href="#" data-food="129367"> &#129367 Salad</a>
+                <div class="dropdown-divider">Bread and Cheese</div>
+                <a class="dropdown-item" href="#" data-food=> &#129366 Bread</a>
+                <a class="dropdown-item" href="#" data-food="129472"> &#129472 Cheese</a>
+                <div class="dropdown-divider">Dishes</div>
+                <a class="dropdown-item" href="#" data-food="127858"> &#127858 Stew</a>
+                <a class="dropdown-item" href="#" data-food="127843"> &#127843 Sushi</a>
+                <a class="dropdown-item" href="#" data-food="127836"> &#127836 Soup/Ramen</a>
+                <a class="dropdown-item" href="#" data-food="127837"> &#127837 Noodles/Pasta</a>
+                <a class="dropdown-item" href="#" data-food="127829"> &#127829 Pizza</a>
+                <div class="dropdown-divider">Drinks</div>
+                <a class="dropdown-item" href="#" data-food="127861"> &#127861 Tea</a>
+                <a class="dropdown-item" href="#" data-food="9749"> &#9749 Coffee</a>
+                <a class="dropdown-item" href="#" data-food="129380"> &#129380 Soda</a>
+                <a class="dropdown-item" href="#" data-food="127864"> &#127864 Cocktail</a>
+                <a class="dropdown-item" href="#" data-food="129346"> &#129346 Champagne</a>
+                <a class="dropdown-item" href="#" data-food="127866"> &#127866 Beer</a>
+                <a class="dropdown-item" href="#" data-food="129347"> &#129347 Hard Liquor</a>
+                <a class="dropdown-item" href="#" data-food="127862"> &#127862 Sake</a>
+                <a class="dropdown-item" href="#" data-food="127863"> &#127863 Wine</a>
+                <div class="dropdown-divider">Sweet Things</div>
+                <a class="dropdown-item" href="#" data-food="129379"> &#129379 Cereal</a>
+                <a class="dropdown-item" href="#" data-food="127849"> &#127849 Doughnut</a>
+                <a class="dropdown-item" href="#" data-food="127850"> &#127850 Cookie</a>
+                <a class="dropdown-item" href="#" data-food="127851"> &#127851 Chocolate</a>
+                <a class="dropdown-item" href="#" data-food="127853"> &#127853 Candy</a>
+                <a class="dropdown-item" href="#" data-food="127846"> &#127846 Ice Cream</a>
+                <a class="dropdown-item" href="#" data-food="127856"> &#127856 Cake</a>
+                <a class="dropdown-item" href="#" data-food="129383"> &#129383 Pie</a>
+                <a class="dropdown-item" href="#" data-food="127869"> &#127869 Misc.</a>
+            </ul>
         </div>
     </form>
 </div>
