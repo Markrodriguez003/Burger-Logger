@@ -1,31 +1,37 @@
 const MYSQL = require("mysql"); //Loading in mysql 
 
 let connection = MYSQL.createConnection({
-  //     host: 'localhost',
-  //     user: 'me',
-  //     password: 'secret',
-  //     database: 'my_db'
-  //   });
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: '^!5PpS%Oyh@j2*',
+  database: 'foodie_db',
+  charset : 'utf8mb4'
+});
 
-  // if (process.env.JAWSDB_URL) {
-  //   connection = MYSQL.createConnection(process.env.JAWSDB_URL)
-  // }
-  // else {
-  //   connection = MYSQL.createConnection({
-  //     host: 'localhost',
-  //     user: 'me',
-  //     password: 'secret',
-  //     database: 'my_db'
-  //   });
-  // };
+// HEROKU
 
-  // connection.connect(function (err) {
-  //   if (err) {
-  //     console.error("error connecting: " + err);
-  //     return;
-  //   }
-  //   console.log("connected as id " + connection.threadId);
-  // });
+// if (process.env.JAWSDB_URL) {
+//   connection = MYSQL.createConnection(process.env.JAWSDB_URL)
+// }
+// else {
+//   connection = MYSQL.createConnection({
+//     host: 'localhost',
+//     user: 'me',
+//     password: 'secret',
+//     database: 'my_db'
+//   });
+// };
 
 
-  module.exports = connection;
+// DB CONNECTION
+connection.connect((err) => {
+  if (err) {
+    console.error("ERROR::::: " + err);
+    return;
+  }
+  console.log("Connected: " + connection.threadId);
+});
+
+
+module.exports = connection;

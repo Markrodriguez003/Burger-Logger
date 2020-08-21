@@ -1,8 +1,7 @@
 const express = require("express"); // Bringing in express module
 const handlebars = require("express-handlebars"); // Bringing in express-handlebars
 const path = require("path"); //  Bringing in node path module
-// const router = require("./controllers/burgers_controller");
-
+let routes = require("./controllers/foodie_controller.js");
 const app = express();
 
 const PORT = 7878 || process.env.PORT; // Setting up port
@@ -23,11 +22,13 @@ app.engine("handlebars", handlebars({
 
 // Sets up the static folder that contains all of our static assets (the things that don't change -> images, sound files, our pages, ect)
 app.use(express.static(path.join(__dirname, "/public")));
+app.use(routes);
 
+// app.get("/", (req, res) => {
+//     res.render("index");
+// });
 
-app.get("/", (req, res) => {
-    res.render("index");
-});
+ 
 
 // Setup server listener to port AFTER db tables is fully loaded
 app.listen(PORT, function () {
