@@ -9,7 +9,7 @@ $(document).ready(() => {
    loadFoodieItems();
     // GRABS ICON FROM ICON DROPDOWN
     $(".foodie-icon-dropdown a").on("click", (e) => {
-        // e.stopPropagation();
+        // e.stopPropagation(); 
         // e.preventDefault();
         icon = e.target.text;
     })
@@ -31,7 +31,7 @@ $(document).ready(() => {
             icon: icon,
             devoured: 0
         };
-        console.log("NEW FOODIE ITEM:::" + JSON.stringify(newFoodItem));
+        console.log("NEW FOODIE ITEM SUBMITTED:::" + JSON.stringify(newFoodItem));
 
         // Sends request to create and insert new foodie item via ajax POST
         $.ajax("/api/foodie", {
@@ -55,6 +55,8 @@ $(document).on("click", ".devour-btn", (e) => {
     e.preventDefault();
 
     let id = $(this).data("id");
+    console.log("THIS IS THE FOOD ITEMS ID::: " + id);
+
     console.log($(e.target).parent()[0].firstChild.nodeValue);
     let devouredFoodieItem = $(e.target).parent()[0].firstChild.nodeValue;
     addDevouredItem(devouredFoodieItem);
@@ -62,12 +64,12 @@ $(document).on("click", ".devour-btn", (e) => {
     $(e.target).parent().remove();
 
     // UPDATES FOODIE ITEM TO DEVOURED STATE
-    // let devouredState = {
-    //     devoured: 1
-    // }
+    let devouredState = {
+        devoured: 1
+    }
 
-    // // 
-    // $.ajax("/api/foodie" + id, {
+    
+    // $.ajax("/api/foodie/" + id, {
     //     type: "PUT",
     //     data: devouredState
     // }).then(
@@ -100,7 +102,7 @@ function addDevouredItem(devouredItem) {
         .addClass(`btn btn-large btn-secondary text-white row-sm ml-4 float-left undo-btn`) // Creates a new item in foodie wishlist item (left col) 
 }
 
-// LOADS FOODIE ITENM FROM SERVER TO WISHLIST COLUMNS WHEN PAGE LOADS
+// LOADS FOODIE ITEM FROM SERVER TO WISHLIST COLUMNS WHEN PAGE LOADS
 function loadFoodieItems() {
 
     $.ajax("/api/foodie/all", {
@@ -108,14 +110,13 @@ function loadFoodieItems() {
 
     }).then(
         (foodieItems) => {
-            console.log("FOODIE ITEMS TAKEN FROM DB::: " + JSON.stringify(foodieItems));
-            console.log("HOW MANY FOODIE ITEMS::: " + foodieItems.length);
-            console.log("FIRST FOODIE ITEM --> " + foodieItems[0].foodie_name + " " + foodieItems[0].foodie_icon)
-
+            // console.log("FOODIE ITEMS TAKEN FROM DB::: " + JSON.stringify(foodieItems));
+            // console.log("HOW MANY FOODIE ITEMS::: " + foodieItems.length);
+            // console.log("FIRST FOODIE ITEM --> " + foodieItems[0].foodie_name + " " + foodieItems[0].foodie_icon)
 
             for (let i = 0; i < foodieItems.length; i++) {
-                console.log("We are at index: " + i);
-                console.log("Inserting:: " + foodieItems[i].foodie_name + " " + foodieItems[i].foodie_icon)
+                // console.log("We are at index: " + i);
+                // console.log("Inserting:: " + foodieItems[i].foodie_name + " " + foodieItems[i].foodie_icon)
                 addFoodieItem(foodieItems[i].foodie_name, foodieItems[i].foodie_icon) // call function
             }
 
